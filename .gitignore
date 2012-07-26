@@ -1,0 +1,8 @@
+.bundle
+.rvmrc
+json/*
+db/*.sqlite3
+log/*.log
+log/*.log.*
+tmp/**/*
+bin/**/*
