@@ -1,0 +1,14 @@
+development:
+  facebook_application_id: 379766488756714
+  facebook_secret_key: e058652fb4810ec07881fba21e8617a2
+  
+test: &test
+  facebook_application_id: 379766488756714
+  facebook_secret_key: e058652fb4810ec07881fba21e8617a2
+  
+production:
+  # As configurações para produção estão nas variáveis de ambiente do Heroku, chave SOCIAL_NETWORK
+  # Ambiente Staging => SOCIAL_NETWORK='{ "bitly_login" : "o_4eka54kvkg", "bitly_api_key" : "R_6be8e1b4a6f730c3bac8c5cb3552e840", "twitter_consumer_key" : "u1sBnrETX5fqzF1GHjNoYQ", "twitter_consumer_secret" : "wSqgV7gnJTgMEBAN5utdqo4qTg8rUB600sz3BpADkY", "facebook_application_id" : "170268393039904", "facebook_api_key" : "3db2e7c9d1f872a552fd041986e79ee1", "facebook_secret_key" : "cbff8b50bbf4a6946aaf669c5ee9082c", "facebook_canvas_page_name" : "aquelelance", "facebook_callback_url" : "http://aquelelance.com/user/connect/facebook" }'
+  
+cucumber:
+  <<: *test
