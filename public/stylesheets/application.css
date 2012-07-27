@@ -1,0 +1,27 @@
+#wrapper{  
+ width:960px;  
+ margin:0 auto;  
+ text-align:left;  
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+.box-login-info {
+	margin: 50px 0 10px 50px;
+}
+
+.box-login-info ul li {
+	float: left;
+	margin-right: 15px;
+}
+
+.box-login-info ul li a {
+	font: 16px/20px "Lucida Grande", Arial, sans-serif;
+	color: #000;
+}

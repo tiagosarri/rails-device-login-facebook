@@ -1,0 +1,16 @@
+<div class="container">
+	<% unless user_signed_in? %> 
+		<div class="box-login-info">
+	    <ul>
+	    	<li>
+	    		<%= link_to('Cadastre-se', '/users/sign_up') -%>
+	    	</li>
+	    	<li>
+	    		<a href="#">
+	    			Logar com facebook
+	    		</a>
+	    	</li> 
+	    </ul>
+		</div>
+	<% end %>
+</div>	
