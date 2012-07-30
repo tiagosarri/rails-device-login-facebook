@@ -1,23 +1,15 @@
 class HomeController < ApplicationController
   def connect_facebook
     auth = request.env['omniauth.auth']
-    data = request.env["omniauth.auth"].to_yaml
+    #data = request.env["omniauth.auth"].to_yaml
     
-    if user = User.find_by_email(data["email"])
+    if user = User.find_by_email(auth["info"]["email"])
       user
     else # Create an user with a stub password.
-      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20])
+      User.create!(:email => auth["info"]["email"], :name => auth["info"]["name"], :facebook_id => auth['uid'], :facebook_access_token => auth['credentials']['token'], :password => Devise.friendly_token[0,20])
+      user = User.find_by_email(auth["info"]["email"])
     end
     
-    #@user = User.find_by_id current_user.id
-    #@user.facebook_token = auth['credentials']['token']
-    #@user.facebook_uid = auth['uid']
-    
-    #auth["info"]["email"]
-    
-    #@user.save!
-    
-    #redirect_to '/pageClose.html'
-    render :text => " uid: #{auth["info"]["email"]}"
+    sign_in_and_redirect(:user, user)
   end  
 end
