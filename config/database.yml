@@ -36,4 +36,4 @@ production:
   pool: 5
   username: b1b63aa09b9891
   password: dbf96c4e
-  socket: /tmp/mysql.sock
+  #socket: /tmp/mysql.sock
