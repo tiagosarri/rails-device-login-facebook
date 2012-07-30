@@ -32,8 +32,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rails-device-login-facebook_production
+  database: heroku_c0cb8cf6d0a1670
   pool: 5
-  username: root
-  password:
+  username: b1b63aa09b9891
+  password: dbf96c4e
   socket: /tmp/mysql.sock
