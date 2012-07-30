@@ -14,7 +14,8 @@
 	    	</li>
 	    </ul>
 		<% else %>
-			Hi <%=current_user.name%>
+			Oi <%=current_user.name%> <br />
+			<%= link_to('Sair', destroy_user_session_path, :method => :delete) %>
 		<% end %>
 	</div>	
 </div>	
